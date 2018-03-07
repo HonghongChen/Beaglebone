@@ -3,7 +3,7 @@ var led = Gpio(115, 'out');
 var interval;
 
 interval = setInterval(function(){
-    led.writeSync(led.readSync ^ 1);
+    led.writeSync(led.readSync() ^ 1);
 }, 200);
 
 setTimeout(function(){
